@@ -30,7 +30,7 @@ def _load_wind_cdf(starttime, endtime, instrument, data_product,
     daylist = util._daysplitinterval(starttime, endtime)
     for day in daylist:
         date = day[0]
-        filename = 'wi_{}_{}{:02}{:02}_v01'.format(
+        filename = 'wi_{}_{}{:02}{:02}_v07'.format(
             fname, date.year, date.month, date.day)
         fnames.append(filename)
         local_dir = relative_dir / str(date.year)
