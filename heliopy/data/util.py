@@ -17,6 +17,7 @@ import astropy.units as u
 import sunpy.timeseries as ts
 import warnings
 import collections as coll
+import cdflib
 
 import numpy as np
 import pandas as pd
@@ -478,7 +479,6 @@ def cdf2df(cdf, index_key, dtimeindex=True, badvalues=None, ignore=None):
     df : :class:`pandas.DataFrame`
         Data frame with read in data.
     """
-    import cdflib
     # Extract index values
     try:
         index = cdf[index_key][...][:, 0]
